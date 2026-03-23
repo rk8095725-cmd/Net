@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net-Clone Single File</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --netflix-red: #e50914;
+            --main-bg: #141414;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--main-bg);
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--netflix-red);
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        /* Hero Banner */
+        .banner {
+            height: 85vh;
+            background-image: linear-gradient(to top, var(--main-bg), transparent), 
+                              url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 4%;
+        }
+
+        .banner-title { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        .banner-desc { width: 45%; font-size: 1.1rem; line-height: 1.4; margin-bottom: 1rem; }
+
+        .btn {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 0.6rem 1.8rem;
+            margin-right: 1rem;
+        }
+
+        .btn-play { background-color: white; color: black; }
+        .btn-play:hover { background-color: rgba(255,255,255,0.8); }
+
+        /* Movie Rows */
+        .row { margin-left: 4%; margin-top: 20px; }
+        .row-posters {
+            display: flex;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            padding: 20px 0;
+        }
+
+        .row-posters::-webkit-scrollbar { display: none; }
+
+        .poster {
+            width: 100%;
+            object-fit: contain;
+            max-height: 180px;
+            margin-right: 10px;
+            transition: transform 450ms;
+            border-radius: 4px;
+        }
+
+        .poster:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="logo">NET-CLONE</div>
+        <div class="nav-avatar">Account</div>
+    </nav>
+
+    <header class="banner">
+        <h1 class="banner-title">Project Discovery</h1>
+        <p class="banner-desc">Inside the mind of an AI explorer as they build the future of the web, one line of code at a time. A journey of logic, loops, and layouts.</p>
+        <div class="banner-buttons">
+            <button class="btn btn-play">Play</button>
+            <button class="btn" style="background: rgba(109,109,110,0.7); color: white;">My List</button>
+        </div>
+    </header>
+
+    <div class="row">
+        <h2>Trending Now</h2>
+        <div class="row-posters">
+            <img class="poster" src="https://via.placeholder.com/300x170/222/fff?text=Action" alt="Movie">
+            <img class="poster" src="https://via.placeholder.com/300x170/333/fff?text=Sci-Fi" alt="Movie">
+            <img class="poster" src="https://via.placeholder.com/300x170/444/fff?text=Comedy" alt="Movie">
+            <img class="poster" src="https://via.placeholder.com/300x170/555/fff?text=Drama" alt="Movie">
+            <img class="poster" src="https://via.placeholder.com/300x170/666/fff?text=Thriller" alt="Movie">
+            <img class="poster" src="https://via.placeholder.com/300x170/777/fff?text=Horror" alt="Movie">
+        </div>
+    </div>
+
+</body>
+</html>
+
