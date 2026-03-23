@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -5,45 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Net-Clone Player</title>
     <style>
-        /* पूरा स्क्रीन काला करने के लिए */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* वीडियो का डिब्बा */
-        .video-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* वापस जाने का बटन (Back Button) */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: black; overflow: hidden; }
+        .video-container { width: 100vw; height: 100vh; }
+        iframe { width: 100%; height: 100%; border: none; }
         .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            text-decoration: none;
-            font-size: 18px;
-            font-family: sans-serif;
-            background: rgba(0,0,0,0.5);
-            padding: 10px 20px;
-            border-radius: 5px;
-            z-index: 10;
+            position: absolute; top: 20px; left: 20px; color: white;
+            text-decoration: none; font-family: sans-serif; font-weight: bold;
+            background: rgba(0,0,0,0.6); padding: 10px 20px; border-radius: 4px; z-index: 100;
             border: 1px solid white;
         }
         .back-btn:hover { background: white; color: black; }
@@ -51,10 +20,10 @@
 </head>
 <body>
 
-    <a href="index.html" class="back-btn">← वापस जाएँ (Home)</a>
+    <a href="index.html" class="back-btn">← Back to Home</a>
 
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/m7M4uO6l_u4?autoplay=1" 
+        <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1" 
                 allow="autoplay; encrypted-media" 
                 allowfullscreen>
         </iframe>
@@ -62,4 +31,3 @@
 
 </body>
 </html>
-
